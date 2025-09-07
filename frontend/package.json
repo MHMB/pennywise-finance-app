@@ -18,7 +18,6 @@
     "react-query": "^3.39.3",
     "react-i18next": "^12.1.5",
     "i18next": "^22.4.10",
-    "react-with-direction": "^1.0.0",
     "styled-components": "^5.3.9",
     "react-dropzone": "^14.2.3",
     "react-hot-toast": "^2.4.0",
