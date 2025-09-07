@@ -266,13 +266,13 @@ const Budgets: React.FC = () => {
       )}
 
       {/* Budget Status Overview */}
-      {budgetStatus && budgetStatus.length > 0 && (
+      {budgetStatus?.data && budgetStatus.data.length > 0 && (
         <div className="bg-white rounded-lg shadow p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">
             {t('budgets.status')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {budgetStatus.map((status: any) => (
+            {budgetStatus.data.map((status: any) => (
               <div key={status.budget_id} className="border rounded-lg p-4">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="font-medium text-gray-900">{status.category}</h4>

@@ -11,7 +11,6 @@ import {
   UserCircleIcon,
   CogIcon,
   BellIcon,
-  GlobeAltIcon,
   SunIcon,
   MoonIcon,
 } from '@heroicons/react/24/outline';
@@ -32,7 +31,7 @@ interface AlertFormData {
 
 const Settings: React.FC = () => {
   const { user } = useAuth();
-  const { language, changeLanguage } = useLanguage();
+  const { language, changeLanguage, t } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const queryClient = useQueryClient();
   const [activeTab, setActiveTab] = useState('profile');
@@ -40,7 +39,6 @@ const Settings: React.FC = () => {
   const {
     register: registerProfile,
     handleSubmit: handleProfileSubmit,
-    reset: resetProfile,
     formState: { errors: profileErrors },
   } = useForm<SettingsFormData>();
 

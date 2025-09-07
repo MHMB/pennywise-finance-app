@@ -8,11 +8,9 @@ import LoadingSpinner from '../../components/UI/LoadingSpinner';
 import toast from 'react-hot-toast';
 import {
   PlusIcon,
-  UploadIcon,
-  DownloadIcon,
+  ArrowUpTrayIcon,
   PencilIcon,
   TrashIcon,
-  EyeIcon,
 } from '@heroicons/react/24/outline';
 
 interface TransactionFormData {
@@ -35,7 +33,6 @@ const Transactions: React.FC = () => {
     handleSubmit,
     reset,
     setValue,
-    watch,
     formState: { errors },
   } = useForm<TransactionFormData>();
 
@@ -164,7 +161,7 @@ const Transactions: React.FC = () => {
             onClick={() => setShowImportModal(true)}
             className="btn-secondary flex items-center"
           >
-            <UploadIcon className="w-4 h-4 mr-2" />
+            <ArrowUpTrayIcon className="w-4 h-4 mr-2" />
             {t('transactions.importCSV')}
           </button>
           <button
@@ -374,7 +371,7 @@ const Transactions: React.FC = () => {
                 }`}
               >
                 <input {...getInputProps()} />
-                <UploadIcon className="mx-auto h-12 w-12 text-gray-400" />
+                <ArrowUpTrayIcon className="mx-auto h-12 w-12 text-gray-400" />
                 <p className="mt-2 text-sm text-gray-600">
                   {isDragActive
                     ? 'Drop the CSV file here...'

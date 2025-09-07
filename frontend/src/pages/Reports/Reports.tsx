@@ -6,7 +6,7 @@ import LoadingSpinner from '../../components/UI/LoadingSpinner';
 import {
   DocumentTextIcon,
   ChartBarIcon,
-  DownloadIcon,
+  ArrowDownTrayIcon,
 } from '@heroicons/react/24/outline';
 
 const Reports: React.FC = () => {
@@ -238,7 +238,7 @@ const Reports: React.FC = () => {
             <option value="yearly">{t('reports.yearly')}</option>
           </select>
           <button className="btn-secondary flex items-center">
-            <DownloadIcon className="w-4 h-4 mr-2" />
+            <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
             {t('reports.downloadReport')}
           </button>
         </div>
